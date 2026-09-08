@@ -1,0 +1,47 @@
+name: Kopia danych świata
+
+on:
+  schedule:
+    # Raz na godzinę, o :17 — poza pełną godziną, kiedy odpytują wszyscy.
+    - cron: '17 * * * *'
+  workflow_dispatch:        # przycisk "Run workflow" do ręcznego uruchomienia
+  push:
+    branches: [main]        # pierwsze uruchomienie zaraz po wgraniu plików
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Nigdy dwa przebiegi naraz — inaczej dałoby to dwa pobrania w tej samej godzinie.
+concurrency:
+  group: mirror
+  cancel-in-progress: false
+
+jobs:
+  mirror:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Pobierz i przetwórz dane
+        env:
+          SITE_URL: ${{ vars.SITE_URL }}
+          CONTACT: ${{ vars.CONTACT }}
+        run: node scripts/fetch.mjs
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: public
+
+      - id: deploy
+        uses: actions/deploy-pages@v4
