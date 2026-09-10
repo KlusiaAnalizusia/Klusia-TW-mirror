@@ -1,0 +1,61 @@
+name: Dobowa migawka punktów (burzenie)
+
+# 07:50 czasu polskiego, tuż przed typowym oknem uderzeń.
+# GitHub liczy czas w UTC, a Polska ma latem +2, zimą +1 — dlatego dwa wpisy
+# i sprawdzenie godziny lokalnej w kroku poniżej. Odpala się tylko ten właściwy.
+on:
+  schedule:
+    - cron: '50 5 * * *'    # 07:50 czasu letniego (CEST)
+    - cron: '50 6 * * *'    # 07:50 czasu zimowego (CET)
+  workflow_dispatch:         # ręczne uruchomienie z zakładki Actions
+
+permissions:
+  contents: write
+
+concurrency:
+  group: mirror-snapshot
+  cancel-in-progress: false
+
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Czy to właściwa godzina lokalna
+        id: gate
+        run: |
+          H=$(TZ=Europe/Warsaw date +%H)
+          if [ "$H" = "07" ] || [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "run=yes" >> $GITHUB_OUTPUT
+          else
+            echo "run=no" >> $GITHUB_OUTPUT
+            echo "Godzina lokalna $H — to nie jest przebieg 07:50, kończę."
+          fi
+
+      - uses: actions/checkout@v4
+        if: steps.gate.outputs.run == 'yes'
+
+      - uses: actions/setup-node@v4
+        if: steps.gate.outputs.run == 'yes'
+        with:
+          node-version: '20'
+
+      - name: Świeże dane świata
+        if: steps.gate.outputs.run == 'yes'
+        run: node scripts/fetch.mjs
+
+      - name: Migawka punktów i wykrycie burzenia
+        if: steps.gate.outputs.run == 'yes'
+        run: node scripts/snapshot.mjs
+
+      - name: Zapisz w repozytorium
+        if: steps.gate.outputs.run == 'yes'
+        run: |
+          git config user.name  "mirror-bot"
+          git config user.email "mirror-bot@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "Brak zmian."
+          else
+            git commit -m "migawka punktów $(TZ=Europe/Warsaw date +%F) + burzenie"
+            git push
+          fi
