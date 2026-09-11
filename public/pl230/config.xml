@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<config>
+
+<speed>1.6</speed>
+<unit_speed>0.625</unit_speed>
+<moral>1</moral>
+<premium>
+  <free_Premium>1</free_Premium>
+  <free_Premium_intervals>500,15000</free_Premium_intervals>
+  <AccountManager>1</AccountManager>
+  <AccountManager_Premium_needed>1</AccountManager_Premium_needed>
+  <ItemNameColor>1</ItemNameColor>
+  <free_AccountManager>1</free_AccountManager>
+  <free_AccountManager_intervals>10,25,100,250,500,1000</free_AccountManager_intervals>
+  <BuildTimeReduction>0</BuildTimeReduction>
+  <BuildTimeReduction_percentage>50</BuildTimeReduction_percentage>
+  <BuildInstant>0</BuildInstant>
+  <BuildInstant_free>0</BuildInstant_free>
+  <BuildCostReduction>0</BuildCostReduction>
+  <FarmAssistent>0</FarmAssistent>
+  <MerchantBonus>0</MerchantBonus>
+  <ProductionBonus>0</ProductionBonus>
+  <NoblemanSlot>0</NoblemanSlot>
+  <MerchantExchange>0</MerchantExchange>
+  <MerchantExchange_ratio>1</MerchantExchange_ratio>
+  <PremiumExchange>0</PremiumExchange>
+  <KnightBookImprove>0</KnightBookImprove>
+  <KnightBookDowngrade>0</KnightBookDowngrade>
+  <KnightBookReroll>0</KnightBookReroll>
+  <KnightRespec>0</KnightRespec>
+  <KnightRecruitTime>0</KnightRecruitTime>
+  <KnightRecruitInstant>0</KnightRecruitInstant>
+  <KnightReviveTime>0</KnightReviveTime>
+  <KnightReviveInstant>0</KnightReviveInstant>
+  <KnightTrainingCost>0</KnightTrainingCost>
+  <KnightTrainingTime>0</KnightTrainingTime>
+  <KnightTrainingInstant>0</KnightTrainingInstant>
+  <DailyBonusUnlock>0</DailyBonusUnlock>
+  <ScavengingSquadLoot>0</ScavengingSquadLoot>
+  <PremiumEventFeatures>0</PremiumEventFeatures>
+  <PremiumRelicFeatures>0</PremiumRelicFeatures>
+  <VillageSkin>1</VillageSkin>
+</premium>
+<awards>
+  <available>1</available>
+  <milestones_available>1</milestones_available>
+  <AwardDailyKillsAttacker_lead_time>30D</AwardDailyKillsAttacker_lead_time>
+  <AwardDailyKillsDefender_lead_time>30D</AwardDailyKillsDefender_lead_time>
+  <AwardDailyKillsSupporter_lead_time>30D</AwardDailyKillsSupporter_lead_time>
+  <AwardDailyLootResources_lead_time>0</AwardDailyLootResources_lead_time>
+  <AwardDailyScavengeResources_lead_time>30D</AwardDailyScavengeResources_lead_time>
+  <AwardDailyLootVillages_lead_time>0</AwardDailyLootVillages_lead_time>
+  <AwardDailyVillageCount_lead_time>60D</AwardDailyVillageCount_lead_time>
+  <AwardHighscoreCont_lead_time>60D</AwardHighscoreCont_lead_time>
+  <AwardHighscoreGlobal_lead_time>60D</AwardHighscoreGlobal_lead_time>
+</awards>
+<build>
+  <destroy>1</destroy>
+</build>
+<misc>
+<kill_ranking>2</kill_ranking>
+<tutorial>5</tutorial>
+<trade_cancel_time>300</trade_cancel_time>
+</misc>
+<commands>
+<millis_arrival>1</millis_arrival>
+<attack_gap>230</attack_gap>
+<support_gap>230</support_gap>
+<command_cancel_time>600</command_cancel_time>
+</commands>
+<newbie>
+  <days>5</days>
+  <ratio_days>60</ratio_days>
+  <ratio>10</ratio>
+  <removeNewbieVillages>1</removeNewbieVillages>
+</newbie>
+<game>
+  <buildtime_formula>2</buildtime_formula>
+  <knight>1</knight>
+  <knight_new_items></knight_new_items>
+  <knight_archer_bonus>0</knight_archer_bonus>
+  <archer>1</archer>
+  <tech>2</tech>
+  <farm_limit>0</farm_limit>
+  <church>0</church>
+  <watchtower>0</watchtower>
+  <stronghold>0</stronghold>
+  <fake_limit>1</fake_limit>
+  <barbarian_rise>0.003</barbarian_rise>
+  <barbarian_shrink>1</barbarian_shrink>
+  <barbarian_max_points>1000</barbarian_max_points>
+  <scavenging>1</scavenging>
+  <hauls>0</hauls>
+  <hauls_base>1000</hauls_base>
+  <hauls_max>100000</hauls_max>
+  <base_production>30</base_production>
+  <event>0</event>
+  <suppress_events>0</suppress_events>
+  <relics>0</relics>
+  <relics_new>0</relics_new>
+</game>
+<buildings>
+  <custom_main>-1</custom_main>
+  <custom_farm>-1</custom_farm>
+  <custom_storage>-1</custom_storage>
+  <custom_place>-1</custom_place>
+  <custom_barracks>-1</custom_barracks>
+  <custom_church>-1</custom_church>
+  <custom_smith>-1</custom_smith>
+  <custom_wood>-1</custom_wood>
+  <custom_stone>-1</custom_stone>
+  <custom_iron>-1</custom_iron>
+  <custom_market>-1</custom_market>
+  <custom_stable>-1</custom_stable>
+  <custom_wall>-1</custom_wall>
+  <custom_garage>-1</custom_garage>
+  <custom_hide>-1</custom_hide>
+  <custom_snob>-1</custom_snob>
+  <custom_statue>-1</custom_statue>
+  <custom_watchtower>-1</custom_watchtower>
+</buildings>
+<snob>
+  <gold>1</gold>
+  <auto_minting>1</auto_minting>
+  <cheap_rebuild>0</cheap_rebuild>
+  <rise>2</rise>
+  <max_dist>60</max_dist>
+  <factor>1</factor>
+  <coin_wood>28000</coin_wood>
+  <coin_stone>30000</coin_stone>
+  <coin_iron>25000</coin_iron>
+  <no_barb_conquer></no_barb_conquer>
+</snob>
+<ally>
+  <no_harm>0</no_harm>
+  <no_other_support>2</no_other_support>
+  <no_other_support_type>0</no_other_support_type>
+  <allytime_support>3</allytime_support>
+  <allytime_support_type>1</allytime_support_type>
+  <no_leave>0</no_leave>
+  <no_join>0</no_join>
+  <limit>50</limit>
+  <fixed_allies>0</fixed_allies>
+  <fixed_allies_randomized></fixed_allies_randomized>
+  <wars_member_requirement>5</wars_member_requirement>
+  <wars_points_requirement>15000</wars_points_requirement>
+  <wars_autoaccept_days>7</wars_autoaccept_days>
+  <auto_lock_tribes>1</auto_lock_tribes>
+  <auto_lock_dominance_percentage>0</auto_lock_dominance_percentage>
+  <auto_lock_days>120</auto_lock_days>
+  <auto_lock_time_warning_sent></auto_lock_time_warning_sent>
+  <auto_lock_dominance_warning_sent></auto_lock_dominance_warning_sent>
+  <levels>1</levels>
+  <xp_requirements>v1</xp_requirements>
+</ally>
+<coord>
+  <map_size>1000</map_size>
+  <func>4</func>
+  <empty_villages>100</empty_villages>
+  <bonus_villages>0</bonus_villages>
+  <inner>6830</inner>
+  <select_start>0</select_start>
+  <village_move_wait>336</village_move_wait>
+  <noble_restart>1</noble_restart>
+  <start_villages>1</start_villages>
+</coord>
+<sitter>
+<allow>1</allow>
+<illegal_time>48</illegal_time>
+<max_sitting>2</max_sitting>
+</sitter>
+<sleep>
+  <active>0</active>
+  <delay>60</delay>
+  <min>6</min>
+  <max>10</max>
+  <min_awake>12</min_awake>
+  <max_awake>36</max_awake>
+  <warn_time>10</warn_time>
+</sleep>
+<night>
+  <active>1</active>
+  <start_hour>0</start_hour>
+  <end_hour>8</end_hour>
+  <def_factor>2</def_factor>
+  <duration>14</duration>
+</night>
+<mood>
+  <loss_max>35</loss_max>
+  <loss_min>20</loss_min>
+  <load>1</load>
+</mood>
+<win>
+  <check>3</check>
+  <give_prizes>1</give_prizes>
+</win>
+<points_villages_win>
+  <points>0</points>
+  <villages>0</villages>
+  <hours>0</hours>
+</points_villages_win>
+<dominance_win>
+  <status>0</status>
+  <domination_warning>50</domination_warning>
+  <world_age_warning>150</world_age_warning>
+  <domination_endgame>70</domination_endgame>
+  <world_age_endgame>300</world_age_endgame>
+  <holding_period_days>0</holding_period_days>
+  <domination_reached_at>0</domination_reached_at>
+  <victory_reached_at>0</victory_reached_at>
+</dominance_win>
+<runes_win>
+  <spawning_delay>90</spawning_delay>
+  <spawn_villages_per_continent>25</spawn_villages_per_continent>
+  <win_percentage>60</win_percentage>
+  <hold_time>14</hold_time>
+  <disable_morale>0</disable_morale>
+</runes_win>
+<siege_win>
+  <villages>36</villages>
+  <required_points>162000</required_points>
+  <check_days>7</check_days>
+  <minimum_world_age>140</minimum_world_age>
+  <reduction_percentage>12</reduction_percentage>
+  <reduction_max_percentage>85</reduction_max_percentage>
+  <disable_morale>0</disable_morale>
+</siege_win>
+<casual>
+  <transfer_to>plp13</transfer_to>
+  <attack_block></attack_block>
+  <attack_block_max>1.2</attack_block_max>
+  <block_noble></block_noble>
+  <disabled_restart_deadline>48</disabled_restart_deadline>
+  <automation_version>1</automation_version>
+  <automation_start_after>P1Y</automation_start_after>
+  <automation_change_interval>P4W</automation_change_interval>
+  <limit_inventory_transfer>1</limit_inventory_transfer>
+</casual>
+
+</config>
