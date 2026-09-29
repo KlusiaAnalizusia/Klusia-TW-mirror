@@ -95,7 +95,7 @@
   <hauls_max>1500000</hauls_max>
   <base_production>30</base_production>
   <event>0</event>
-  <suppress_events></suppress_events>
+  <suppress_events>0</suppress_events>
   <relics>0</relics>
   <relics_new>1</relics_new>
 </game>
@@ -137,8 +137,8 @@
   <no_other_support_type>1</no_other_support_type>
   <allytime_support>3</allytime_support>
   <allytime_support_type>1</allytime_support_type>
-  <no_leave></no_leave>
-  <no_join></no_join>
+  <no_leave>0</no_leave>
+  <no_join>0</no_join>
   <limit>50</limit>
   <fixed_allies>0</fixed_allies>
   <fixed_allies_randomized></fixed_allies_randomized>
@@ -165,7 +165,7 @@
   <start_villages>1</start_villages>
 </coord>
 <sitter>
-<allow>0</allow>
+<allow>1</allow>
 <illegal_time>48</illegal_time>
 <max_sitting>2</max_sitting>
 </sitter>
